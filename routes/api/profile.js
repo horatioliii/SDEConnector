@@ -120,7 +120,6 @@ router.post(
     ]);
 
     profileFields.user = req.user.id;
-    console.log(profileFields);
 
     profileFields.social = pick(req.body, [
       "youtube",
@@ -131,7 +130,9 @@ router.post(
     ]);
 
     if (typeof req.body.skills !== "undefined") {
-      profileFields.skills = req.body.skills.split(",");
+      profileFields.skills = req.body.skills
+        .split(",")
+        .map(skill => skill.trim());
     }
 
     // Check if handle exists
