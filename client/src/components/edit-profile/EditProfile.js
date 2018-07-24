@@ -137,7 +137,7 @@ class CreateProfile extends Component {
 
           <InputGroup
             placeholder="LinkedIn Profile URL"
-            name="linedin"
+            name="linkedin"
             icon="fab fa-linkedin"
             value={this.state.linkedin}
             onChange={this.onChange}

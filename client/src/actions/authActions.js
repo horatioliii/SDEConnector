@@ -56,4 +56,6 @@ export const logoutUser = () => dispatch => {
   setAuthToken(false);
   // Set current user to {}
   dispatch(setCurrentUser({}));
+  // Back to login page
+  window.location.href = "/login";
 };
